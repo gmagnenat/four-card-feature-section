@@ -1,0 +1,26 @@
+@use "sass:color";
+
+$clr-red: hsl(0, 78%, 62%);
+$clr-cyan: hsl(180, 62%, 55%);
+$clr-orange: hsl(34, 97%, 64%);
+$clr-blue: hsl(212, 86%, 64%);
+
+$clr-text: #4d4f62;
+$clr-text-light: color.scale($clr-text, $lightness: 50%);
+
+$ff-body: "Poppins", sans-serif;
+
+$fs-body: 0.8125rem;
+$fs-intro: 0.9375rem;
+$fs-h2: 1.25rem;
+$fs-h1: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 1.3636)), 2.25rem);
+
+$space-s: 1.25rem;
+$space-m: 1.4rem;
+$space-l: 1.75rem;
+
+$card-height: clamp(
+  13.875rem,
+  calc(13.875rem + ((1vw - 0.2rem) * 3.1818)),
+  15.625rem
+);
