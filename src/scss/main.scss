@@ -12,9 +12,11 @@ body {
   justify-content: center;
   font-family: $ff-body;
   font-size: $fs-body;
+  line-height: $lh-normal;
   color: $clr-text;
 }
 
+// Add space above the header
 .container {
   padding-top: 5.4375rem;
   padding-inline: $space-l;
@@ -25,7 +27,6 @@ body {
 
   &__heading {
     font-weight: 100;
-    line-height: 1.55;
     line-height: 1.45;
     letter-spacing: 0.014em;
     font-size: $fs-h1;
@@ -56,10 +57,9 @@ body {
 }
 
 .card {
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  // padding: $space-l;
-  // padding-top: 1.4rem;
-  padding: $space-m;
+  box-shadow: $shadow-l;
+  padding: $card-padding;
+  border-radius: $rounded-m;
   letter-spacing: 0.01em;
   border-top: 4px solid;
   min-height: $card-height;
@@ -69,18 +69,19 @@ body {
 
   &__heading {
     font-weight: 600;
-    letter-spacing: 0.002em;
+    letter-spacing: -0.003em;
     font-size: $fs-h2;
   }
 
   &__description {
-    margin-top: 0.1rem;
+    margin-top: 0.35rem;
     line-height: 1.8;
+    letter-spacing: 0.005em;
     color: $clr-text-light;
   }
 
   &__illustration {
-    width: 3.5625rem;
+    width: 3.5625rem; // 57px on mobile
     margin-top: auto;
     margin-left: auto;
   }
@@ -105,18 +106,25 @@ footer {
 
 @media screen and (min-width: 60em) {
   .container {
-    max-width: 70rem;
+    max-width: 69.375rem;
     padding-inline: 0;
   }
   #main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 30px;
+    gap: 1.875rem;
   }
 
   .card {
     min-height: $card-height;
+    padding-block: $space-l;
+    padding-inline: $space-xl;
+
+    &__illustration {
+      width: 4rem; // 64px on desktop
+      margin-bottom: 0.25rem;
+    }
 
     &:nth-of-type(1) {
       grid-column: 1 / 1;

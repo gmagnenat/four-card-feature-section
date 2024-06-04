@@ -15,12 +15,21 @@ $fs-intro: 0.9375rem;
 $fs-h2: 1.25rem;
 $fs-h1: clamp(1.5rem, calc(1.5rem + ((1vw - 0.2rem) * 1.3636)), 2.25rem);
 
+$lh-normal: 1.5;
+
 $space-s: 1.25rem;
 $space-m: 1.4rem;
-$space-l: 1.75rem;
+$space-l: 1.75rem; // 28px
+$space-xl: 2rem; // 32px
 
 $card-height: clamp(
   13.875rem,
   calc(13.875rem + ((1vw - 0.2rem) * 3.1818)),
   15.625rem
 );
+
+$card-padding: clamp(1.75rem, calc(1.75rem + ((1vw - 0.2rem) * 0.4545)), 2rem);
+
+$shadow-l: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+$rounded-m: 0.5rem; // 8px
