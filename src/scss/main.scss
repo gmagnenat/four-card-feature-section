@@ -14,13 +14,14 @@ body {
   font-size: $fs-body;
   line-height: $lh-normal;
   color: $clr-text;
+  background-color: $clr-bg-light;
 }
 
 // Add space above the header
 .container {
   padding-top: clamp(
-    4rem,
-    calc(5.3125rem + ((1vw - 0.2rem) * -2.3864)),
+    5rem,
+    calc(5.3125rem + ((1vw - 0.2rem) * -0.5682)),
     5.3125rem
   );
   padding-inline: $space-l;

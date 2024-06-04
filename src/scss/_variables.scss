@@ -1,5 +1,6 @@
 @use "sass:color";
 
+$clr-bg-light: #f2f2f2;
 $clr-red: hsl(0, 78%, 62%);
 $clr-cyan: hsl(180, 62%, 55%);
 $clr-orange: hsl(34, 97%, 64%);
@@ -30,6 +31,6 @@ $card-height: clamp(
 
 $card-padding: clamp(1.75rem, calc(1.75rem + ((1vw - 0.2rem) * 0.4545)), 2rem);
 
-$shadow-l: 0 5px 25px rgba(0, 0, 0, 0.08);
+$shadow-l: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
 
 $rounded-m: 0.5rem; // 8px
