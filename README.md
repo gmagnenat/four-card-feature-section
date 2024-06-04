@@ -1,6 +1,6 @@
 # Frontend Mentor - Four card feature section solution
 
-This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -30,14 +30,6 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
@@ -45,66 +37,95 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+- Organising files for my workflow with scss
+- Building a little tool to organise files faster
+- Inspecting the figma file and setting up variables for colors
+- Building the mobile version
+- Adding breakpoint for the desktop layout
+- Adding variant for sizes and spacing for the desktop layout
+- Double checking all values and converting to rem when needed
+
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I created a small script to organise my project files for my workflow. Running the script will do the following :
 
-To see how you can add code snippets, see below:
+- move files in a src directory
+- init an empty package.json file
+- add a .prettierrc file with the `{}` content
+- add node_modules in the .gitignore file
+- init the git repository
+- create empty scss partials files
+- generate a dummy screenshot.jpg
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```bash
+# add the setup file to the .gitignore
+echo "setup.sh" >> .gitignore
+
+# Add a prettier config file
+touch .prettierrc
+echo "{}" >> .prettierrc
+
+# Add a dummy screenshot file
+touch screenshot.jpg
+
+# Create source directory and move files
+mkdir src
+mv index.html src/
+mv images src/
+
+# Create scss directory and prepare partials
+mkdir src/scss
+cd src/scss
+touch main.scss _variables.scss _mixins.scss _resets.scss
+
+# Delete content of the main.scss file and add partials - ONLY BEFORE WORKING ON THE PROJECT
+> main.scss
+echo "@use 'variables' as *;" >> main.scss
+echo "@use 'mixins' as *;" >> main.scss
+echo "@use 'resets' as *;" >> main.scss
+cd ../..
+
+# Add empty packages.json
+npm init -y
+
+# Init empty git repository
+git init
+
+# Install packages - UPDATE package.json FILE WITH THE BOILERPLATE
+npm install
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+I also refreshed my knowledge on CSS Grids. By analysing the project it looks like 3 columns on desktop so it can be easy to just wrap the center card in a div and use `flexbox`.
+I didn't like this solution and wanted to use only CSS grid for the layout of the cards.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I started sketching the grid on a paper to plan what I wanted to do. I did a grid of 3 columns and 4 rows that will allow me to place the card appropriately.
+
+I used `grid-column` and `grid-row` to set start and end value for each of the cards.
+
+I used a custom attribute for the cards to differentiate them.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Learn more about grids and scss. Some part of the code seem to be repetitive and could be refactored in mixins or function.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Improve the configuration file with tests to avoid deleting important content in files
+
+Learn to write a cli tool and a node package
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Interactive guide to grid](https://www.joshwcomeau.com/css/interactive-guide-to-grid/) - this helped me refresh my knowledge on grids
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Gwenaël Magnenat](https://gmagnenat.com)
+- Frontend Mentor - [@gmagnenat](https://www.frontendmentor.io/profile/gmagnenat)
+- LinkedIn - [@gmagnenat](https://www.linkedin.com/in/gmagnenat)
