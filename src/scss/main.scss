@@ -63,6 +63,7 @@ body {
 
 .card {
   box-shadow: $shadow-l;
+  background-color: $clr-white;
   padding: $card-padding;
   border-radius: $rounded-m;
   letter-spacing: 0.01em;

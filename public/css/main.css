@@ -70,7 +70,7 @@ body {
   font-size: 0.8125rem;
   line-height: 1.5;
   color: #4d4f62;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
 }
 
 .container {
@@ -111,6 +111,7 @@ body {
 
 .card {
   box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+  background-color: #ffffff;
   padding: clamp(1.75rem, 1.75rem + (1vw - 0.2rem) * 0.4545, 2rem);
   border-radius: 0.5rem;
   letter-spacing: 0.01em;
