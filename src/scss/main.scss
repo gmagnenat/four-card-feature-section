@@ -17,23 +17,22 @@ body {
   background-color: $clr-bg-light;
 }
 
-// Add space above the header
-.container {
+.features {
   padding-top: clamp(
     5rem,
     calc(5.3125rem + ((1vw - 0.2rem) * -0.5682)),
     5.3125rem
   );
   padding-inline: $space-l;
-}
 
-.header {
-  text-align: center;
+  &__heading-wrapper {
+    text-align: center;
+  }
 
   &__heading {
-    font-weight: 100;
-    line-height: 1.45;
-    letter-spacing: 0.014em;
+    font-weight: 200;
+    line-height: 1.43;
+    letter-spacing: 0.0065em;
     font-size: $fs-h1;
 
     strong {
@@ -43,18 +42,18 @@ body {
   }
 
   &__intro {
-    font-size: $fs-intro;
-    max-width: 60ch;
+    font-size: 0.959rem;
+    max-width: 55ch;
     margin-inline: auto;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
     line-height: 1.65;
     color: $clr-text-light;
-    font-weight: 300;
-    margin-top: 0.8rem;
+    font-weight: 500;
+    margin-top: 1rem;
   }
 }
 
-#main {
+.cards {
   display: flex;
   flex-direction: column;
   gap: clamp(1.5625rem, 1.6rem, 1.875rem);
@@ -75,14 +74,14 @@ body {
 
   &__heading {
     font-weight: 600;
-    letter-spacing: -0.003em;
+    letter-spacing: -0.005em;
     font-size: $fs-h2;
   }
 
   &__description {
-    margin-top: 0.35rem;
+    margin-top: 0.5rem;
     line-height: 1.8;
-    letter-spacing: 0.005em;
+    letter-spacing: 0.015em;
     color: $clr-text-light;
   }
 
@@ -111,11 +110,11 @@ footer {
 }
 
 @media screen and (min-width: 60em) {
-  .container {
+  .features {
     max-width: 69.375rem;
     padding-inline: 0;
   }
-  #main {
+  .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -124,12 +123,10 @@ footer {
 
   .card {
     min-height: $card-height;
-    padding-block: $space-l;
-    padding-inline: $space-xl;
 
     &__illustration {
       width: 4rem; // 64px on desktop
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
     }
 
     &:nth-of-type(1) {
