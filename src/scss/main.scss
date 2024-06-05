@@ -25,7 +25,7 @@ body {
   );
   padding-inline: $space-l;
 
-  &__heading-wrapper {
+  &__intro {
     text-align: center;
   }
 
@@ -41,7 +41,7 @@ body {
     }
   }
 
-  &__intro {
+  &__description {
     font-size: 0.959rem;
     max-width: 55ch;
     margin-inline: auto;
